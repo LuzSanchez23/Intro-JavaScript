@@ -1,14 +1,15 @@
-console.log('JavaScript-Variables');
+;
+//00-Introduction to Javascript Homework starts here
+var firstName= "Analy";
+var pizzaCount= 4;
+var totalCost= true;
+var IsHungry= pizzaCount * 10.00;
 
-// var firstName= "Analy";
-// var pizzaCount= 4;
-// var totalCost= true;
-// var IsHungry= "pizzaCount" * 10.00;
-
-// alert ("Welcome to Analy's Pizza Restaurant");
-// alert ("Our current special is buy 4 pizzas and get one free");
-// confirm ("Sounds like your little one is hungry?");
-// prompt ("The total cost is $20.00 for the 4 pizzas and you get one free. Would you take this offer?");
+alert ("Welcome to " + firstName + "'s Pizza Restaurant");
+alert ("Our current special is buy " + pizzaCount + " pizzas and get one free");
+alert ("Sounds like your little one is hungry?");
+alert ("The total cost is $" + IsHungry + " for the 4 pizzas and you get one free. Would you take this offer?");
+//00-Introduction to Javascript Homework ends here
 
 //Calculate properties of a circle
 //Store a radius into a variable.
