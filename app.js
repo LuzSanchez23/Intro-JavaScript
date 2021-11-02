@@ -1,4 +1,4 @@
-;
+
 //00-Introduction to Javascript Homework starts here
 var firstName= "Analy";
 var pizzaCount= 4;
@@ -12,7 +12,7 @@ alert ("The total cost is $" + IsHungry + " for the 4 pizzas and you get one fre
 //00-Introduction to Javascript Homework ends here
 
 //Calculate properties of a circle
-//Store a radius into a variable.
+//Store a radius into a variable
 var radius= 10;
 //Calculate the circumference based on the radius
 var pi= 3.141592;
@@ -193,3 +193,4 @@ calculateSupply (50, 3);
 // Create a function called calcArea:
 // Pass the radius to the function.
 // Calculate the area based on the radius, and output "The area is NN".
+
