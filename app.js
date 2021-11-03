@@ -11,6 +11,7 @@ alert ("Sounds like your little one is hungry?");
 alert ("The total cost is $" + IsHungry + " for the 4 pizzas and you get one free. Would you take this offer?");
 //00-Introduction to Javascript Homework ends here
 
+//01-Introduction to Javascript Homework starts here
 //Calculate properties of a circle
 //Store a radius into a variable
 var radius= 10;
@@ -33,27 +34,24 @@ document.getElementById("celsius").innerHTML= celsius + "ºC is equal to " + " "
 var fahrenheit= 100;
 var fahrenheitTocelsius= (fahrenheit - 32) * 5 / 9;
 document.getElementById("fahrenheit").innerHTML= fahrenheit + " " + "ºF is equal to " + " " + fahrenheitTocelsius + "ºC";
+//01-Introduction to Javascript Homework ends here
 
-//Want to find out how old you'll be?
-//Store your birth year in a variable
-var birthYear= 1986;
-//Store a future year in a variable
-var futureYear= 2025;
-var futureYearsecond= 2026;
-//Calculate your 2 possible ages
-var currentAge= futureYear-birthYear;
-var currentAgesecond= futureYearsecond - birthYear;
-document.getElementById("birth").innerHTML="I will be either" + " " + currentAge + " " + "or" + " " + currentAgesecond + " " + '\n' +
-     " " + "depending on what month it is in 2026";
-//Store a future year in a variable twice
-var futureYear= 2049;
-var futureYearsecond= 2050;
-var currentAge= futureYear-birthYear;
-var currentAgesecond= futureYearsecond - birthYear;
- document.getElementById("birth2").innerHTML="I will be either" + " " + currentAge + " " + "or" + " " + currentAgesecond + " " + '\n' +
-     " " + "depending on what month it is in 2050";
 
-//12 Exercise Solutions
+//Geometrize homework starts here
+function calcCircumfrence(radius) {
+     var circumference=  Math.PI * 2 * radius; 
+     document.getElementById("radiuss").innerHTML= "The circumference is "+circumference; 
+}
+calcCircumfrence (23);
+
+function calcArea(radius){
+     var area=Math.PI * radius * radius;
+     document.getElementById("areaa").innerHTML= "The area is "+area; 
+}
+calcArea (4);
+//Geometrize homework ends here
+
+//12 Exercise Solutions starts here
 
 //1 Write an expression that uses at least 3 different arithmetic operators.
 //  The expression should equal 42.
@@ -95,7 +93,6 @@ document.getElementById("three").innerHTML= "ALL Strings are CrEaTeD equal" == "
 var celsiuss= 12;
 var fahrenheitt= celsiuss * 1.8 + 32;
 console.log (fahrenheitt);
-
 
 //6 Build a string using concatenation by combining the lines from this famous haiku poem by Yosa Buson.
 //  Blowing from the west
@@ -142,15 +139,9 @@ var myTime= new Date();
 var myTimee= new Date().toLocaleDateString();
 console.log(message + myTime);
 console.log(message + myTimee);
+//12 Exercise Solutions starts here
 
-
-//functions
-//teaching-materials.org/javascript/slides/varsfucntions
-
-function myFunction() {
-     var message= "Hello World";
-     document.getElementById("botom").innerHTML= message;
-}
+//functions #1 starts here
 
 // Write a function named tellFortune that:
 // takes 4 arguments: number of children, partner's name, geographic location, job title.*angument van dentro de los prentesis
@@ -158,39 +149,125 @@ function myFunction() {
 // Call that function 3 times with 3 different values for the arguments.
 
 function tellFortune(jobTittle, geoLocation, partner, numKids){
-var message= (`You will be a ${jobTittle} in ${geoLocation}, and married to ${partner} with ${numKids} kids.`)
-document.getElementById("function").innerHTML= message;
+     var message= (`You will be a ${jobTittle} in ${geoLocation}, and married to ${partner} with ${numKids} kids.`)
+     document.getElementById("function").innerHTML= message;
+     }
+     tellFortune('bball player', 'spain', 'Shaq', 3);
+     tellFortune('Soccer player', 'vegas', 'Jaden', 5);
+     tellFortune('Fotball player', 'Vegas', 'Sean', 10);
+     
+     // The Lifetime Supply Calculator
+     // Ever wonder how much a "lifetime supply" of your favorite snack is? Wonder no more!
+     // Write a function named calculateSupply that:
+     // takes 2 arguments: age, amount per day.
+     // calculates the amount consumed for rest of the life (based on a constant max age).
+     // outputs the result to the screen like so: "You will need NN to last you until the ripe old age of X"
+     // Call that function three times, passing in different values each time.
+     // Bonus: Accept floating point values for amount per day, and round the result to a round number.
+     
+     function calculateSupply(age, amountPerDay){
+     var maxAge= 104;
+     var totalNeeded= (amountPerDay * 365) * (maxAge - age);
+     var message= (`You will need ${totalNeeded} cups of coffee to last you until the ripe old age of ${maxAge}`)
+     document.getElementById("supply").innerHTML= message;
+     console.log= message;
+     }
+     calculateSupply (30, 4);
+     calculateSupply (23, 2);
+     calculateSupply (50, 3);
+
+     
+//Want to find out how old you'll be?
+//Store your birth year in a variable
+var birthYear= 1986;
+//Store a future year in a variable
+var futureYear= 2025;
+var futureYearsecond= 2026;
+//Calculate your 2 possible ages
+var currentAge= futureYear-birthYear;
+var currentAgesecond= futureYearsecond - birthYear;
+document.getElementById("birth").innerHTML="I will be either" + " " + currentAge + " " + "or" + " " + currentAgesecond + " " + '\n' +
+     " " + "depending on what month it is in 2026";
+//Store a future year in a variable twice
+var futureYear= 2049;
+var futureYearsecond= 2050;
+var currentAge= futureYear-birthYear;
+var currentAgesecond= futureYearsecond - birthYear;
+ document.getElementById("birth2").innerHTML="I will be either" + " " + currentAge + " " + "or" + " " + currentAgesecond + " " + '\n' +
+     " " + "depending on what month it is in 2050";
+     //functions #1 ends here
+
+     //functions #2 starts here
+
+     //for template literal we use ('')
+// let str1 = "Hello ";
+// let str2 = "today is!" + new Date();
+// let str3 = " Have a nice day!";
+// console.log(str1 + str2+ str3+ "Tomorrow is Hump Day" + "That is mid-week");
+// console.log('${str1} ${str2} ${str3} Tomorrow is hump day. That is mid-week');
+
+function getAge () {
+     var mes1= prompt("what is your name?");
+     // alert(`Hello ${mes}`);
+     document.getElementById("demo-6").innerHTML= "Hello " + mes1;
 }
-tellFortune('bball player', 'spain', 'Shaq', 3);
-tellFortune('Soccer player', 'vegas', 'Jaden', 5);
-tellFortune('Fotball player', 'Vegas', 'Sean', 10);
+getAge();
 
-// The Lifetime Supply Calculator
-// Ever wonder how much a "lifetime supply" of your favorite snack is? Wonder no more!
-// Write a function named calculateSupply that:
-// takes 2 arguments: age, amount per day.
-// calculates the amount consumed for rest of the life (based on a constant max age).
-// outputs the result to the screen like so: "You will need NN to last you until the ripe old age of X"
-// Call that function three times, passing in different values each time.
-// Bonus: Accept floating point values for amount per day, and round the result to a round number.
-
-function calculateSupply(age, amountPerDay){
-var maxAge= 104;
-var totalNeeded= (amountPerDay * 365) * (maxAge - age);
-var message= (`You will need ${totalNeeded} cups of coffee to last you until the ripe old age of ${maxAge}`)
-document.getElementById("supply").innerHTML= message;
-console.log= message;
+function toCelsius(f) {
+     return (5/9) * (f-32);
 }
-calculateSupply (30, 4);
-calculateSupply (23, 2);
-calculateSupply (50, 3);
+document.getElementById("demo-0").innerHTML= toCelsius(77);
+document.getElementById("demo-1").innerHTML= toCelsius(35);
+document.getElementById("demo-2").innerHTML= toCelsius(20);
 
-// The Geometrizer
-// Create 2 functions that calculate properties of a circle, using the definitions here.
-// Create a function called calcCircumfrence:
-// Pass the radius to the function.
-// Calculate the circumference based on the radius, and output "The circumference is NN".
-// Create a function called calcArea:
-// Pass the radius to the function.
-// Calculate the area based on the radius, and output "The area is NN".
+function calculateDeg () {
+     var degree= document.getElementById("deg").value;
+     var tempCalc= (5/9) * (degree-32);
+     // console.log("Your Degree is " + tempCalc + " in farenheit!!");
+     document.getElementById("celDeg").innerHTML= Math.round(tempCalc);
+}
+calculateDeg();
+
+document.write('Hello World'+'<br/>'); 
+document.write('Hello World'+'<br/>'); 
+document.write('Hello World'+'<br/>'); 
+document.write('Hello World'+'<br/>'); 
+document.write('Hello World'+'<br/>'); 
+document.write('Hello World'+'<br/>'); 
+document.write('Hello World'+'<br/>'); 
+document.write('Hello World'+'<br/>'); 
+document.write('Hello World'+'<br/>'); 
+document.write('Hello World'+'<br/>'); 
+for(let i=0; i<10; i++)
+{
+     document.write(`Hello World` + `<br/>`);
+}
+for(i=0; i<10; i++) {
+     if (i=== 7) {
+     break;
+     }
+
+     document.write("The number is" + i + "br"); 
+}
+
+//Puppy years starts here
+function calculateDeg () {
+     var humanYear= document.getElementById("deg").value;
+     var realDogAge= humanYear * 7;
+     document.getElementById("celDeg").innerHTML=(realDogAge);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
