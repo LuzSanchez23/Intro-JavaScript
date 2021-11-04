@@ -1,5 +1,5 @@
 
-//00-Introduction to Javascript Homework starts here
+//*00-Introduction to Javascript Homework starts here
 var firstName= "Analy";
 var pizzaCount= 4;
 var totalCost= true;
@@ -9,9 +9,9 @@ alert ("Welcome to " + firstName + "'s Pizza Restaurant");
 alert ("Our current special is buy " + pizzaCount + " pizzas and get one free");
 alert ("Sounds like your little one is hungry?");
 alert ("The total cost is $" + IsHungry + " for the 4 pizzas and you get one free. Would you take this offer?");
-//00-Introduction to Javascript Homework ends here
+//*00-Introduction to Javascript Homework ends here
 
-//01-Introduction to Javascript Homework starts here
+//*01-Introduction to Javascript Homework starts here
 //Calculate properties of a circle
 //Store a radius into a variable
 var radius= 10;
@@ -34,10 +34,10 @@ document.getElementById("celsius").innerHTML= celsius + "ºC is equal to " + " "
 var fahrenheit= 100;
 var fahrenheitTocelsius= (fahrenheit - 32) * 5 / 9;
 document.getElementById("fahrenheit").innerHTML= fahrenheit + " " + "ºF is equal to " + " " + fahrenheitTocelsius + "ºC";
-//01-Introduction to Javascript Homework ends here
+//*01-Introduction to Javascript Homework ends here
 
 
-//Geometrize homework starts here
+//*Geometrize homework starts here
 function calcCircumfrence(radius) {
      var circumference=  Math.PI * 2 * radius; 
      document.getElementById("radiuss").innerHTML= "The circumference is "+circumference; 
@@ -49,9 +49,9 @@ function calcArea(radius){
      document.getElementById("areaa").innerHTML= "The area is "+area; 
 }
 calcArea (4);
-//Geometrize homework ends here
+//*Geometrize homework ends here
 
-//12 Exercise Solutions starts here
+//*12 Exercise Solutions starts here
 
 //1 Write an expression that uses at least 3 different arithmetic operators.
 //  The expression should equal 42.
@@ -139,10 +139,9 @@ var myTime= new Date();
 var myTimee= new Date().toLocaleDateString();
 console.log(message + myTime);
 console.log(message + myTimee);
-//12 Exercise Solutions starts here
+//*12 Exercise Solutions ends here
 
-//functions #1 starts here
-
+//*functions #1 starts here
 // Write a function named tellFortune that:
 // takes 4 arguments: number of children, partner's name, geographic location, job title.*angument van dentro de los prentesis
 // outputs your fortune to the screen like so: "You will be a X in Y, and married to Z with N kids."
@@ -195,9 +194,9 @@ var currentAge= futureYear-birthYear;
 var currentAgesecond= futureYearsecond - birthYear;
  document.getElementById("birth2").innerHTML="I will be either" + " " + currentAge + " " + "or" + " " + currentAgesecond + " " + '\n' +
      " " + "depending on what month it is in 2050";
-     //functions #1 ends here
+     //*functions #1 ends here
 
-     //functions #2 starts here
+     //*functions #2 starts here
 
      //for template literal we use ('')
 // let str1 = "Hello ";
@@ -249,14 +248,16 @@ for(i=0; i<10; i++) {
 
      document.write("The number is" + i + "br"); 
 }
+ //*functions #2 ends here
 
-//Puppy years starts here
-function calculateDeg () {
-     var humanYear= document.getElementById("deg").value;
+//*Puppy years starts here
+function calculateDogAge () {
+     var humanYear= document.getElementById("age").value;
      var realDogAge= humanYear * 7;
-     document.getElementById("celDeg").innerHTML=(realDogAge);
+     document.getElementById("puppy").innerHTML= "Your doggie is " + realDogAge + " years old in human years!";
 }
-
+calculateDogAge();
+//*Puppy years ends here
 
 
 
